@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Harbor Vice — a Coral Bay story</title>
+<meta name="description" content="Harbor Vice: an original top-down open-world crime game that runs entirely in the browser. Explore Coral Bay on foot and by car, run three jobs for fixer Lena Ortiz, and keep one step ahead of the police.">
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0d1520; }
+  body { background: linear-gradient(180deg, #0d1520 0%, #12283d 100%); }
+  #game { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+  /* Visually hidden but announced: the live status line for screen readers. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  noscript p { color: #f3ead2; font-family: system-ui, sans-serif; text-align: center; margin-top: 20vh; }
+</style>
+</head>
+<body>
+<canvas id="game" aria-label="Harbor Vice: explore Coral Bay on foot and by car, run missions, and evade the police"></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+<noscript><p>Harbor Vice needs JavaScript — the whole city is simulated live in your browser.</p></noscript>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
